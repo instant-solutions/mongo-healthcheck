@@ -8,3 +8,10 @@ func TestCheck(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestCheckWrongPort(t *testing.T) {
+	err := check("mongodb://localhost:12345")
+	if err == nil {
+		t.Fail()
+	}
+}
