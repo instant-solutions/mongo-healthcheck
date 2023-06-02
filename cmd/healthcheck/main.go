@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	uri := flag.String("uri", "", "MongoDB connection string")
+	uri := flag.String("uri", "mongodb://localhost:27017", "MongoDB connection string")
 
 	flag.Parse()
 
