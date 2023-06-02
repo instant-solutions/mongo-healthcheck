@@ -38,6 +38,11 @@ func check(uri string) error {
 	if err != nil {
 		return err
 	}
+	defer func() {
+		if err = client.Disconnect(context.Background()); err != nil {
+			panic(err)
+		}
+	}()
 
 	var result bson.M
 
