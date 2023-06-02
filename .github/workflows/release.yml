@@ -38,3 +38,4 @@ jobs:
           release_tag: ${{  github.ref_name }}
           project_path: "./cmd/healthcheck"
           binary_name: "mongo-healthcheck"
+          ldflags: -w -s
